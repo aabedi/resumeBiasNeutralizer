@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>RecruitBot</title>
+		<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/filedrag.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/style1.css" />
+		<link rel="stylesheet" href="css/style-xlarge.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=1">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="index.html">RecruitBot</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="search.html">Get Started</a></li>
+					</ul>
+				</nav>
+			</header>
+
+
+		<!-- Main -->
+			<section id="main" class="wrapper" style="">
+				<div class="container">
+
+					<header class="major">
+						<h3>Time is money - Get started now</h3>
+						<p>Sort through thousands of resumes with the simple click of a button</p>
+					</header>
+
+				</div>
+			</section>
+
+
+				<div class="container">
+					<div class="row">
+
+						<section class="4u 6u(medium) 12u$(small)">
+							<p></p>
+						</section>
+
+
+						<section class="4u 6u$(medium) 12u$(small)">
+
+										<h2><strong>Enter Resumes here</strong></h2>
+
+										<form id="upload" action="" method="POST" enctype="multipart/form-data">
+
+										<fieldset>
+										<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000"  />
+										<div>
+											<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+											<div id="filedrag"></div>
+										</div>
+
+										</form>
+						</section>
+					</div>
+				</div>
+
+
+				<!-- <div id="slider1">
+					<input class="bar" type="range" id="rangeinput" value="50" onchange="rangevalue.value=value"/>
+					<span class="highlight"></span>
+					<output id="rangevalue1">50</output>
+				</div>
+
+
+				<div id="slider1">
+					<input class="bar" type="range" id="rangeinput" value="50" onchange="rangevalue.value=value"/>
+					<span class="highlight"></span>
+					<output id="rangevalue1">50</output>
+				</div>
+
+				<div id="slider1">
+					<input class="bar" type="range" id="rangeinput" value="50" onchange="rangevalue.value=value"/>
+					<span class="highlight"></span>
+					<output id="rangevalue1">50</output>
+				</div> -->
+
+				<ol class="categories">
+					<li><p>School</p></li>
+					<br><br>
+					<li><p>GPA</p></li>
+					<br><br>
+					<li><p>Skills</p></li>
+				</ol>
+
+				<div class="constraints">
+					<form action="demo_form.asp" >
+						School ranking within top..(1-280): <input type="text" name="school" width="100"><br>
+						GPA larger than: <input type="text" name="gpa" size="35"><br>
+						Skills: <input type="text" name="skills"><br>
+					</form>
+				</div>
+
+				<div class="weights">
+					<form action="demo_form.asp">
+						Weight:<input type="text" name="school-weight"><br><br>
+						<input type="text" name="gpa-weight"><br><br>
+						<input type="text" name="skill-weight"><br><br>
+						<a href="www.mongolab.com/login"><input type="submit" id="submit-button"></a>
+						<p>/10</p>
+					</form>
+				</div>
+
+
+			<section id="main" class="wrapper" style="">
+				<div class="container">
+
+					<header class="major">
+						<form id="upload" action="" method="POST" enctype="multipart/form-data">
+
+										<div id="submitbutton">
+											<a href="www.mongolab.com/login"><button type="submit">Analyze</button></a>
+										</div>
+										</fieldset>
+
+										</form>
+
+					</header>
+
+				</div>
+			</section>
+
+
+		<!-- Footer -->
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<section class="4u 6u(medium) 12u$(small)">
+							<h3>Useful Articles</h3>
+							<p>We found these particularly useful:</p>
+							<ul class="alt">
+								<li><a href="http://www.daxtra.com/daxtra-parser/what-is-cv-resume-parsing.html">Daxtra</a></li>
+								<li><a href="http://recruiterbox.com/blog/baby-steps-in-hr-technology-what-is-resume-parsing-2/">RecruiterBox</a></li>
+							</ul>
+						</section>
+						<section class="4u 6u$(medium) 12u$(small)">
+							<h3>Blog</h3>
+							<p>Coming Soon!</p>
+							<ul class="alt">
+							</ul>
+						</section>
+						<section class="4u$ 12u$(medium) 12u$(small)">
+							<h3>Contact Us</h3>
+							<ul class="icons">
+								<li><a href="https://twitter.com" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com" class="icon rounded fa-facebook"><span class="label">Facebook</span></a></li>
+							</ul>
+							<ul class="tabular">
+								<li>
+									<h3>Address</h3>
+									858 Spring Street NW <br>
+									Atlanta, GA 30308
+								</li>
+								<li>
+									<h3>Mail</h3>
+									<a href="mailto:aabedi7+recruitbot@gmail.com">RecruitBot@xyz.com</a>
+								</li>
+							</ul>
+						</section>
+					</div>
+					<ul class="copyright">
+						<li>&copy; <a href="http://RecruitBot.me">RecruitBot All     rights reserved</li>
+						<li>Created with &#9829; at <a href="http://yhack.org/">YHack</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>

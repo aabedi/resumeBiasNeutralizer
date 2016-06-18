@@ -1,0 +1,36 @@
+{
+  "name": "recruitbot",
+  "version": "1.0.0",
+  "description": "Resume Parsing and Scoring",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "grunt-wiredep": "^2.0.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.2.4",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0",
+    "bower": "1.7.7",
+    "wiredep": "^3.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aabedi/RecruitBot.git"
+  },
+  "author": "Albert Abedi, Arjun Nayak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aabedi/RecruitBot/issues"
+  },
+  "homepage": "https://github.com/aabedi/RecruitBot#readme"
+}

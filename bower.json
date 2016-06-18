@@ -1,0 +1,35 @@
+{
+  "name": "RecruitBot",
+  "homepage": "https://github.com/aabedi/RecruitBot",
+  "authors": [
+    "Albert Abedi <aabedi3@gatech.edu>"
+  ],
+  "description": "Resume Parsing and Scoring",
+  "main": "./public/index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angularUtils-pagination": "angular-utils-pagination#^0.10.0",
+    "datatables": "^1.10.11",
+    "holderjs": "^2.9.1",
+    "datatables-responsive": "^2.0.2",
+    "mocha": "^2.4.5",
+    "metisMenu": "^2.4.0",
+    "raphael": "^2.1.4",
+    "morris.js": "morrisjs#^0.5.1",
+    "angular-resource": "^1.5.0",
+    "Flot": "flot#^0.8.3",
+    "angular-route": "^1.5.0"
+  }
+}
