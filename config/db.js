@@ -19,6 +19,19 @@ var ResumeTextFile = new Schema({
 	text: {type: String, required: true}
 });
 
+var ResumePdf = new Schema({
+  // unique ID for this file
+  "_id" : <unspecified>,
+  // size of the file in bytes
+  "length" : data_number,
+  // size of each of the chunks.  Default is 256k
+  "chunkSize" : data_number,
+  // date when object first stored
+  "uploadDate" : data_date,
+  // result of running the "filemd5" command on this file's chunks
+  "md5" : data_string
+});
+
 // var ResumeCandidateRelation = new Schema({
 //   name: {type: String, required: true},
 //   student_id: { type: Number, required: true}

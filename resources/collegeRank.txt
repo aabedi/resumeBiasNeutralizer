@@ -278,3 +278,4 @@
 278,278,University of Phoenix,"Phoenix, AZ"
 279,279,Walden University,"Minneapolis, MN"
 280,280,Wilmington University,"New Castle, DE"
+281,281,San Jose State University,"San Jose, CA"

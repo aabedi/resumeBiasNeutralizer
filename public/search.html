@@ -1,188 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>RecruitBot</title>
-		<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<script src="js/filedrag.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
-		<link rel="stylesheet" href="css/skel.css" />
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/style1.css" />
-		<link rel="stylesheet" href="css/style-xlarge.css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=1">
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Android</title>
 
-		<!-- Header -->
-			<header id="header">
-				<h1><a href="index.html">RecruitBot</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="search.html">Get Started</a></li>
-					</ul>
-				</nav>
-			</header>
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="images/android-logo.png">
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+          <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field">
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Phones</a>
+            </nav>
+          </div>
+          <span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="images/android-logo.png">
+          </span>
+          <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+            <i class="material-icons">more_vert</i>
+          </button>
+        </div>
+      </div>
 
-		<!-- Main -->
-			<section id="main" class="wrapper" style="">
-				<div class="container">
+      <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <img class="android-logo-image" src="images/android-logo-white.png">
+        </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Phones</a>
+        </nav>
+      </div>
 
-					<header class="major">
-						<h3>Time is money - Get started now</h3>
-						<p>Sort through thousands of resumes with the simple click of a button</p>
-					</header>
+			<!-- <div id="videogrp">
+					 <div id="video">
+							 <video autoplay loop poster="https://a0.muscache.com/airbnb/static/US_60_ANTHEM.mp4" style="position: relative; top: 0px; left: 100%; margin-left: -200%; min-width: 100%; min-height: 100%; max-height: 400px; max-width: 100%;">
+							 	<source src="https://a0.muscache.com/airbnb/static/US_60_ANTHEM.mp4" type="video/mp4">
+							 </video>
+					 </div>
+			</div> -->
 
-				</div>
-			</section>
+			<video poster="../public/images/home.jpg" autoplay="autoplay" src="https://a0.muscache.com/airbnb/static/US_60_ANTHEM.mp4" style="position: relative; z-index: 0; top: 0px; left: 100%; margin-left: -200%; max-height: 400px; min-width: 100%; min-height: 100%;"></video>
 
+        <footer class="android-footer mdl-mega-footer">
+          <div class="mdl-mega-footer--top-section">
+            <div class="mdl-mega-footer--left-section">
+              <button class="mdl-mega-footer--social-btn"></button>
+              &nbsp;
+              <button class="mdl-mega-footer--social-btn"></button>
+              &nbsp;
+              <button class="mdl-mega-footer--social-btn"></button>
+            </div>
+            <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+            </div>
+          </div>
 
-				<div class="container">
-					<div class="row">
+          <div class="mdl-mega-footer--middle-section">
+            <p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
+            <p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
+          </div>
 
-						<section class="4u 6u(medium) 12u$(small)">
-							<p></p>
-						</section>
-
-
-						<section class="4u 6u$(medium) 12u$(small)">
-
-										<h2><strong>Enter Resumes here</strong></h2>
-
-										<form id="upload" action="" method="POST" enctype="multipart/form-data">
-
-										<fieldset>
-										<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000"  />
-										<div>
-											<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
-											<div id="filedrag"></div>
-										</div>
-
-										</form>
-						</section>
-					</div>
-				</div>
-
-
-				<!-- <div id="slider1">
-					<input class="bar" type="range" id="rangeinput" value="50" onchange="rangevalue.value=value"/>
-					<span class="highlight"></span>
-					<output id="rangevalue1">50</output>
-				</div>
-
-
-				<div id="slider1">
-					<input class="bar" type="range" id="rangeinput" value="50" onchange="rangevalue.value=value"/>
-					<span class="highlight"></span>
-					<output id="rangevalue1">50</output>
-				</div>
-
-				<div id="slider1">
-					<input class="bar" type="range" id="rangeinput" value="50" onchange="rangevalue.value=value"/>
-					<span class="highlight"></span>
-					<output id="rangevalue1">50</output>
-				</div> -->
-
-				<ol class="categories">
-					<li><p>School</p></li>
-					<br><br>
-					<li><p>GPA</p></li>
-					<br><br>
-					<li><p>Skills</p></li>
-				</ol>
-
-				<div class="constraints">
-					<form action="demo_form.asp" >
-						School ranking within top..(1-280): <input type="text" name="school" width="100"><br>
-						GPA larger than: <input type="text" name="gpa" size="35"><br>
-						Skills: <input type="text" name="skills"><br>
-					</form>
-				</div>
-
-				<div class="weights">
-					<form action="demo_form.asp">
-						Weight:<input type="text" name="school-weight"><br><br>
-						<input type="text" name="gpa-weight"><br><br>
-						<input type="text" name="skill-weight"><br><br>
-						<a href="www.mongolab.com/login"><input type="submit" id="submit-button"></a>
-						<p>/10</p>
-					</form>
-				</div>
-
-
-			<section id="main" class="wrapper" style="">
-				<div class="container">
-
-					<header class="major">
-						<form id="upload" action="" method="POST" enctype="multipart/form-data">
-
-										<div id="submitbutton">
-											<a href="www.mongolab.com/login"><button type="submit">Analyze</button></a>
-										</div>
-										</fieldset>
-
-										</form>
-
-					</header>
-
-				</div>
-			</section>
-
-
-		<!-- Footer -->
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<div class="row">
-						<section class="4u 6u(medium) 12u$(small)">
-							<h3>Useful Articles</h3>
-							<p>We found these particularly useful:</p>
-							<ul class="alt">
-								<li><a href="http://www.daxtra.com/daxtra-parser/what-is-cv-resume-parsing.html">Daxtra</a></li>
-								<li><a href="http://recruiterbox.com/blog/baby-steps-in-hr-technology-what-is-resume-parsing-2/">RecruiterBox</a></li>
-							</ul>
-						</section>
-						<section class="4u 6u$(medium) 12u$(small)">
-							<h3>Blog</h3>
-							<p>Coming Soon!</p>
-							<ul class="alt">
-							</ul>
-						</section>
-						<section class="4u$ 12u$(medium) 12u$(small)">
-							<h3>Contact Us</h3>
-							<ul class="icons">
-								<li><a href="https://twitter.com" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.facebook.com" class="icon rounded fa-facebook"><span class="label">Facebook</span></a></li>
-							</ul>
-							<ul class="tabular">
-								<li>
-									<h3>Address</h3>
-									858 Spring Street NW <br>
-									Atlanta, GA 30308
-								</li>
-								<li>
-									<h3>Mail</h3>
-									<a href="mailto:aabedi7+recruitbot@gmail.com">RecruitBot@xyz.com</a>
-								</li>
-							</ul>
-						</section>
-					</div>
-					<ul class="copyright">
-						<li>&copy; <a href="http://RecruitBot.me">RecruitBot All     rights reserved</li>
-						<li>Created with &#9829; at <a href="http://yhack.org/">YHack</a></li>
-					</ul>
-				</div>
-			</footer>
-
-	</body>
+        </footer>
+      </div>
+    </div>
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  </body>
 </html>

@@ -51,15 +51,19 @@ def minorityScore(text_array):
     for scl in convert.scl1:
         if scl.lower() in txt:
             score += 1
+            print(scl)
     for wm in convert.women:
         if wm.lower() in txt:
             score += 1
+            print(wm)
     for mn in convert.minority:
         if mn.lower() in txt:
             score +=1
+            print(mn)
     for scl in convert.scl1:
         if scl.lower() in txt:
             score +=1
+            print(scl)
     print("SCORE IS", score)
     return score
 
@@ -127,7 +131,7 @@ def calculateResumeScore(candidate, text_array):
     except:
         expScore = 0
     skillsScore = 25
-    ms = minorityScore(text_array)
+    ms = minorityScore(text_array)*10
     score = (schoolScore) + (gpaScore) + (skillsScore) + (expScore) + ms
     return score
 
