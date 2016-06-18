@@ -30,6 +30,7 @@ def parse(fname, lname, text):
     candidate['experience'] = parseForExperience(text_array)
     candidate['skills'] = parseForSkills(text_array)
     candidate['score'] = calculateResumeScore(candidate)
+    candidate['charged_Words'] = parseForGenderBias(text_array)
     print candidate
     return candidate
 
@@ -80,13 +81,23 @@ def parseForMajor(text_array):
 def parseForExperience(text_array):
     try:
         for word in text_array:
-            if word in convert.companyDict:
+            if word in convert.skillsDict:
                 print word
                 return word
     except ValueError:
         print 'parse for Experience error'
 
 
+def parseForGenderBias(text_array):
+    biasedWords = [["Biased", "Unbiased"]]
+    try:
+        for word in text_array:
+            if word in convert.biasDict:
+                biasedWords.append([convert.biasDict[0], convert.biasDict[1]])
+
+        return biasedWords
+    except:
+        pass
 # def parseForSkills(text_array):
 def parseForSkills(text_array):
     skills = []
@@ -102,9 +113,9 @@ def calculateResumeScore(candidate):
         gpaScore = (float(candidate['gpa'])/4.0)*25
     else:
         gpaScore = 0
-    expScore = ((convert.companyDict.get(candidate['experience']))/10)*25
+    #expScore = ((convert.companyDict.get(candidate['experience']))/10)*25
     skillsScore = 25
-    score = (schoolScore) + (gpaScore) + (expScore) + (skillsScore)
+    score = (schoolScore) + (gpaScore) + (skillsScore)
     print score
     return score
 
