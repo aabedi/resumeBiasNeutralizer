@@ -128,7 +128,7 @@ if __name__ == '__main__':
         print 'parsing ' + fname + ' ' + lname + '\'s resume'
         candidate = parse(fname, lname, resume_dict['text'])
 
-        client = MongoClient('mongodb://<dbuser>:<dbpassword>@ds019054.mlab.com:19054/biasneutralizer')
+        client = MongoClient('mongodb://user:password@ds019054.mlab.com:19054/biasneutralizer')
         db = client.biasneutralizer
         db = client['biasneutralizer']
         # print(candidate)

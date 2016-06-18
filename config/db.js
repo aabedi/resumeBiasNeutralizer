@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
 module.exports = {
-    url : 'mongodb://<recruitbot>:<botpassword>@ds052408.mongolab.com:52408/recruitbotdb'
+    url : 'mongodb://user:password@ds019054.mlab.com:19054/biasneutralizer'
 }
 
 var ResumeTextFile = new Schema({
@@ -33,5 +33,6 @@ var Candidate = new Schema({
 	gpa: { type: String},
   experience: {type: String},
 	skills: { type: Array},
+  charged_Words: { type: Array},
   score: { type: Number}
 })
