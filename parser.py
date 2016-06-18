@@ -29,8 +29,7 @@ def parse(fname, lname, text):
     candidate['gpa'] = parseForGPA(text_array)
     candidate['experience'] = parseForExperience(text_array)
     candidate['skills'] = parseForSkills(text_array)
-    candidate['score'] = calculateResumeScore(candidate)
-    candidate['charged_Words'] = parseForGenderBias(text_array)
+    candidate['score'] = calculateResumeScore(candidate, text)
     print candidate
     return candidate
 
@@ -45,6 +44,25 @@ def parseForEducation(text_array):
                 return college[0:len(college)-1]
     except ValueError:
         print 'parse for education error'
+
+def minorityScore(text_array):
+    score = 0
+    txt = text_array.lower()
+    for scl in convert.scl1:
+        if scl.lower() in txt:
+            score += 1
+    for wm in convert.women:
+        if wm.lower() in txt:
+            score += 1
+    for mn in convert.minority:
+        if mn.lower() in txt:
+            score +=1
+    for scl in convert.scl1:
+        if scl.lower() in txt:
+            score +=1
+    print("SCORE IS", score)
+    return score
+
 
 def parseForGPA(text_array):
     try:
@@ -88,16 +106,7 @@ def parseForExperience(text_array):
         print 'parse for Experience error'
 
 
-def parseForGenderBias(text_array):
-    biasedWords = [["Biased", "Unbiased"]]
-    try:
-        for word in text_array:
-            if word in convert.biasDict:
-                biasedWords.append([convert.biasDict[0], convert.biasDict[1]])
 
-        return biasedWords
-    except:
-        pass
 # def parseForSkills(text_array):
 def parseForSkills(text_array):
     skills = []
@@ -107,16 +116,19 @@ def parseForSkills(text_array):
     print 'skills : ' + str(skills)
     return skills
 
-def calculateResumeScore(candidate):
+def calculateResumeScore(candidate, text_array):
     schoolScore = ((280-int(universities.get(candidate['college'])))/280)*25
     if candidate['gpa'] != None:
         gpaScore = (float(candidate['gpa'])/4.0)*25
     else:
         gpaScore = 0
-    #expScore = ((convert.companyDict.get(candidate['experience']))/10)*25
+    try:
+        expScore = ((convert.companyDict.get(candidate['experience']))/10)*25
+    except:
+        expScore = 0
     skillsScore = 25
-    score = (schoolScore) + (gpaScore) + (skillsScore)
-    print score
+    ms = minorityScore(text_array)
+    score = (schoolScore) + (gpaScore) + (skillsScore) + (expScore) + ms
     return score
 
 if __name__ == '__main__':

@@ -44,43 +44,84 @@ def getUniversities():
         universities[pair[1]] = pair[0]
     return universities
 
+
 companyDict = {
                 'goldman sachs': 10,
-
+                'morgan stanley': 10,
+                'jp morgan': 10,
+                'jp': 10,
+                'blackstone': 9,
+                'bloomberg': 8,
+                'credit suisse': 7,
+                'barclays': 7,
+                'mckinsey': 10,
+                'boston consulting group': 10,
+                'bain company': 10,
+                'pricewaterhouseCoopers advisory': 8,
+                'deloitte': 7,
+                'accenture': 7,
+                'kpmg': 7,
+                'palantir': 10,
+                'uber': 10,
+                'airbnb': 10,
+                'google': 10,
+                'microsoft': 9,
+                'apple': 9,
+                'facebook': 10,
+                'amazon': 9,
+                'pinterest': 9,
+                'tesla': 9,
+                'spacex': 9,
+                'square': 9,
+                'intel': 8,
+                'yahoo': 8,
+                'yahoo!': 8,
+                'twilio': 8,
+                'yelp': 8,
+                'paypal': 7,
+                'disney': 8,
+                'pebble': 7,
+                'northrup grumman': 8,
+                'lockheed martin': 8
                 };
 
 majorDict = {
                 'Finance': 0,
-
+                'Business': 0,
+                'Economics': 0,
+                'Management': 0,
+                'Economics': 0,
+                'Accounting': 0,
+                'Biology': 'STEM',
+                'Physics': 'STEM',
+                'Chemistry': 'STEM',
+                'Math': 'STEM',
+                'Computer Science': 'STEM',
+                'Computer Engineering': 'STEM',
+                'Software Engineering': 'STEM',
+                'Mechanical Engineering': 'STEM',
+                'Electrical Engineering': 'STEM',
+                'Biomedical Engineering': 'STEM',
+                'Chemical Engineering': 'STEM',
 
                 };
 
 
-biasDict = {'fatherhood': 'parenthood', 'goddess': 'god', 'manhandle': 'rough up', 'hostess': 'host', 'manlike': 'humanlike', 'mankind': 'humankind', 'maintenance man': 'janitor', 'flagman': 'flagger', 'copy girl': 'copy clerk',
- 'to a man': 'to a person', 'spaceman': 'astronaut', 'masterpiece': 'great work of art', 'lookout man': 'lookout', "gentlemen's agreement": 'unwritten agreement', 'journeyman': 'experienced tradesperson', 'ranchman': 'rancher', 'elder statesman': 'senior statesperson', "master's degree": 'graduate degree', 'temptress': 'tempter',
-  'newsman': 'reporter', 'enlisted man': 'enlistee', 'young man': 'youth', 'number-two-man': 'second in command', 'mother country': 'homeland', 'housewife': 'homemaker', 'spokeswoman': 'spokesperson', 'Englishman': 'Englander', 'prodigal son': 'returning child', 'medicine man': 'spirit healer',
-   'man of letters': 'scholar', 'toastmistress': 'toast maker', 'manhole': 'utility access hole', 'cowgirl': 'cowhand', 'councilman': 'council member', 'manageress': 'manager', 'johnny-come-lately': 'newcomer', 'craftsman': 'artisan', 'lineman': 'football player', 'mechanical man': 'robot',
-   'maiden name': 'family name', 'choir girl': 'choir member', 'odd-man-out': 'person not included', 'outdoorsman': 'outdoors person', 'man about town': 'bon vivant', 'tribesman': 'tribe member', 'stewardess': 'flight attendant', 'bridesmaid': "bride's attendant", 'headmaster': 'principal', 'governess': 'child caretaker',
-   'forefathers': 'ancestors', "king's ransom": 'valuable', 'legman': 'runner', 'Renaissance man': 'Renaissance person', 'bondsman': 'bondsperson', 'manpower': 'workers', 'chorus girl': 'chorus member', 'man': 'operate', 'fireman': 'firefighter', 'cabin boy': 'cabin attendant',
-    'murderess': 'murderer', 'lumberjack': 'logger', 'yes-man': 'avid follower', 'patrolman': 'police officer', 'Mother Earth': 'earth', 'heiress': 'heir', 'heroine': 'hero', 'man-sized': 'large', 'pressman': 'press operator', 'flyboy': 'pilot',
-     'mailman': 'letter carrier', 'juryman': 'juror', 'oilman': 'oil executive', 'airwoman': 'pilot', 'Scotsman': 'Scot', 'newspaperman': 'reporter', 'paperboy': 'paper carrier', 'funnyman': 'comedian', 'insurance man': 'insurance agent', 'modern man': 'modern people',
-     'drum majorette': 'drum major', 'cavemen': 'cave dwellers', 'maiden': 'first', 'priestess': 'priest', 'frog man': 'diver', 'fighting man': 'fighter', 'maid': 'house cleaner', 'waitress': 'server', 'letterman': 'achiever', 'master': 'expert',
-      'man of distinction': 'person of distinction', 'learned man': 'learned person', 'starlet': 'star young actor', 'masculine': 'male', 'common man': 'commoner', 'contact man': 'contact person', 'men working': 'people working', 'brew master': 'brew director', 'Norseman': 'Norse person', 'master plan': 'main plan',
-      'anchorwoman': 'anchor', 'publicity man': 'publicist', 'brotherly': 'kind', 'marked man': 'targeted person', 'mother tongue': 'native language', 'helmsman': 'coxswain', 'longshoreman': 'stevedore', 'triggerman': 'shooter', 'maid-of-honor': 'honored attendant', 'dairyman': 'dairy farmer',
-      'Uncle Sam': 'United States', 'doorman': 'doorkeeper', 'fall guy': 'scapegoat', 'Frenchmen': 'French people', 'male nurse': 'nurse', 'marksman': 'sharpshooter', 'forewoman': 'supervisor', 'showman': 'actor', 'statesman': 'senior politician', 'Mother Nature': 'nature',
-       'Welshman': 'Welsh person', 'alderman': 'council member/person', 'bus boy': "server's helper", 'organization man': 'team player', 'workman': 'worker', 'businesswoman': 'businessperson', 'meter maid': 'parking enforcement officer', 'majorette': 'drum major', 'crewman': 'crew member', 'newsboy': 'news deliverer',
-       'guardsman': 'soldier', 'conductress': 'conductor', 'pitchman': 'promoter', 'straw man': 'test theory', 'matron of honor': 'honored attendant', 'boss lady': 'supervisor', 'infantryman': 'infantry soldier', 'chambermaid': 'housekeeper', 'congressman': 'member of congress', 'chairwoman': 'chair person',
-       'weatherman': 'weathercaster', 'clergy women': 'clergy', 'brakeman ': 'brake operator', 'switchman': 'switch operator', 'sorceress': 'sorcerer', 'signalman': 'signaler', 'fatherland': 'homeland', 'prehistoric man': 'prehistoric person', 'sculptress': 'sculptor', 'cattlemen': 'cattle owners',
-       'night watchman': 'night security guard', 'horsewoman': 'rider', 'alumna': 'graduates', 'manmade': 'hand made', 'shipmaster': 'captain', 'idea man': 'idea person', 'motherhood': 'parenthood', 'favorite son': 'favorite candidate', 'deliveryman': 'deliverer', 'grandfather clause': 'pre-existing condition',
-       'countryman': 'compatriot', 'blind man': 'blind person', 'man of the year': 'newsmaker of the year', "old wives' tale": 'superstition', 'midshipman': 'sailor', 'middleman': 'go-between', 'office boy': 'messenger', 'rifleman': 'shooter', 'layman': 'layperson', 'brakeman': "conductor's assistant",
-       'song-and-dance-man': 'singer and dancer', 'snowman': 'snow person', 'man of the house': 'husband', 'mother lode': 'main vein', 'king-size': 'huge', 'taskmaster': 'supervisor', 'henchman': 'partner in crime', 'showmanship': 'stage presence', 'radioman': 'radio broadcaster', 'Miss': 'Ms.',
-       'seductress': 'seducer', 'seamstress': 'tailor', 'penmanship': 'handwriting', "workmen's compensation": "workers' compensation", 'nobleman': 'noble person', 'sportsmanlike': 'sporting', 'Irishmen': 'Irish people', 'founding father': 'founder', 'front man': 'representative', 'freshman': 'first year students',
-       'masseuse': 'massage therapist', 'postmistress': 'postal worker', 'man on the street': 'average person', 'serviceman': 'maintenance person', 'headman': 'boss', 'gamesmanship': 'game playing', 'actress': 'actor', 'jazz man': 'jazz player', 'fraternal twins': 'non-identical twins', 'man among men': 'outstanding person',
-       'bagboy': 'bagger', 'master key': 'passkey', 'right-hand man': 'main assistant', 'Dutchman': 'Dutch person', 'key man': 'key person', 'man-eater': 'flesh eater', 'repairman': 'repairer', 'seaman': 'sailor', 'gateman': 'gate keeper', 'playboy': 'pleasure seeker',
-       'career woman': 'career professional', 'assemblyman': 'assemblyperson', 'gunman': 'shooter', 'man-hours': 'work hours', 'comedienne': 'comedian', 'saleslady': 'sales person', 'brethren': 'laity', 'brotherhood': 'fellowship', 'brotherly love': 'charity', 'watchman': 'security guard',
-        'handyman': 'maintenance person', 'man of action': 'go-getter', 'oarsman': 'rower', 'camerawoman': 'camera operator', 'masterful': 'skillful', 'airline stewardess': 'flight attendant', "man's work": 'work', 'John Q. Public': 'the public', 'johnny-on-the-spot': 'prompt person', 'man-to-man': 'face-to-face',
-        'coed': 'student', 'inside man': 'insider', 'number-one-man': 'head', 'workmanlike': 'skillful', 'trash man': 'trash collector', 'sister ship': 'partner ship', 'postman': 'letter carrier', 'weak sister': 'weak', 'girl Friday': 'aide', 'confidence man': 'swindler',
-        'Mrs. ': 'Ms.', 'jack-of-all-trades': 'handyperson', "man's best friend": 'dog', 'city fathers': 'city leaders', 'songstress': 'singer', 'floor man': 'floorwalker', "no-man's-land": 'uninhabited land', 'usherette': 'usher'}
+scl1 = ['ABA Legal Opportunity Scholarship Fund', 'ACS Scholars Program', 'Advisors of American Scholarship', 'AGI Minority Geoscience Student Scholarship', 'AIChE Minority Scholarship Award', 'AICPA Scholarship', 'Allison E. Fisher Scholarship', 'Alphonso Deal Scholarship Award', 'American Dental Association Scholarships', 'Anthony A. Welmas Scholarship', 'APALA Scholarship', 'Arizona Public Service Navajo Scholars Program', 'Asian Pacific Islander Organization Scholarships', 'Blacks at Microsoft Scholarship', 'Boeing IET Minority Enhancement Scholarship', 'Carole Simpson Scholarship', "Denny's Hungry for Education Scholarship", 'Diamond Wipes Scholarship', 'Dowers Family Scholarship',
+'Erie Insurance Scholarship', 'Esperanza Scholarship', 'Eugene Moore Memorial Scholarships', 'Frederick and Demi Seguritan Scholarship', 'Gamma Mu Foundation Scholarship', 'Gates Millennium Scholars Program', 'GE Funds LULAC Scholarship Program', 'Generation Google Scholarship', 'Golden Gate Section Scholarship of the Society of Women Engineers', 'Google Anita Borg Memorial Scholarship', 'Harriet Evelyn Wallace Scholarship', 'Hawaii Community Foundation Scholarships', 'Hsiao Memorial Economics Scholarship', 'Institute of Management Accountants Scholarship', 'Irene and Daisy MacGregor Memorial Scholarship', 'Islamic Scholarship Fund Scholarships', 'Jack Tuckfield Memorial Graduate Business Scholarship Fund', 'Japanese American Citizen League Scholarships', "Jeannette Rankin Women's Scholarship Fund", 'Judy Mann DiStefano Memorial Scholarship', 'Kay Longcope Scholarship Program', 'Lapiz Family Scholarship', 'League Foundation Student Scholarship', 'LGBT Heart Scholarship', 'MALDEF Law School Scholarship',
+'Margaret R. Brewster Scholarship', 'Maria Elena Yuchengco Memorial Journalism Scholarship', 'Marsha D. Roberts Scholarship', 'Martin Luther King Jr. Scholarship Program', 'Michael Jackson Scholarship for the Communication Arts', 'Minorities in Government Finance Scholarship', 'Minorities in Government Scholarship', 'Minority Teacher Education Scholarship', 'MnACC Student of Color Scholarship', 'Monsignor Philip Kenney Scholarship', 'Mothers Pursuing Dreams', 'Mutual of Omaha Actuarial Scholarship for Minority Students', 'NACME Scholarships', 'Nashville Alumni Chapter of Kappa Alpha Psi Fraternity, Inc. Scholarship', 'National Association of Hispanic Journalists Scholarship', 'Palantir Scholarship for Women in Technology', 'PFLAG National Scholarship', 'Point Foundation Scholarships', 'Pride Foundation Scholarships', 'Quincy Sharpe Mills Scholarships', 'Rising Star Scholarship', 'Samuel Schulman Memorial Scholarship', 'Sia Yang Memorial Scholarship', 'Simmons Scholarship for Unitarian Universalist Women', 'Sisters in Solidary to Educate, Respond and Serve Scholarship',
+'Society of Women Engineers Lehigh Valley Section Scholarship', 'Sophie Greenstadt Scholarship for Mid-Life Women', 'South Asian Journalist Association Scholarship', 'South Ohio Science Fair Scholarship', 'Sovereign Nations Scholarship Fund', 'TCU Scholarship Program', 'Tony and Cindi Williams Political Science Scholarship', 'United Way EMS Minority Scholarship', 'University of Connecticut Actuarial Diversity Scholarship', 'Vine Deloria Jr. Memorial Scholarship', 'Wally Davis Scholarship', 'Whitney M. Young, Jr. Memorial Scholarship', 'William Randolph Hearst Scholarship for Minorities', 'William Randolph Hearst Scholarship for Minorities', 'Worldstudio Foundation AIGA Scholarships']
+
+
+women = ["girl's", "girl", "women", "women's", "grace hopper", "ghc", "girls who code"]
+
+minority = ["minority", "hispanic", "black", "asian", "indian", "native american", "pacific islander", "middle eastern", "african american", "lgbtq", "lgbt", "lgb", "queer", "glaad", "black student union", "national society of black engineers", "society of hispanic professional engineers", "women in computing", "society of asian scientists and engineers",
+"nsbe", "sase", "shpe", "society of women in engineering", "swe" ]
+
+scl2 = ["O Wines Opportunity for Success Scholarship", "Gals Go Fish Scholarship","Slaymaker- Kinsey Academic Achievement Award","Citizens Bank Womens Athletic Scholarship","Association for Women in Sports Media Intern/Scholarship","Women and Leadership Program, Panama City","P.E.O. Program for Continuing Education","Lifetime Adoption Foundation Scholarship","Madeline P. Peterson Scholarship for American Indian Women","Burlingame/Gerrity Horticultural Therapy Scholarship", "Women in Wireless Communications Scholarship", "Anarcha, Betsy, and Lucy Memorial Scholarship Award", "O Wines Opportunity for Success Scholarship"]
+
+
+
 
 skillsDict = {'sqlite': '', 'linux': '', 'node.js': '', 'objective-c': '', 'mysql': '', 'angular js': '', 'java': '', 'opengl': '', 'ruby': '',
 'unix': '', 'shell script': '', 'heroku': '', 'perl': '', 'c#': '', 'unity': '', 'html': '', 'matlab': '', 'android': '', 'css3': '', 'python': '',
